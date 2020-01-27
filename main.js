@@ -1,3 +1,4 @@
+
 // Map
 
 var myMap = L.map('map').setView([47.218371, -1.553621], 14);
@@ -43,11 +44,15 @@ function displayStationInfo(answer)
 {
       const infoStation = JSON.parse(answer);
 
-      $("#address").text(`adresse : ${infoStation.address}`);
+      const spanAddress = document.getElementById("address");
+      spanAddress.textContent = `adresse : ${infoStation.address}`;
 
-      $("#place").text(` ${infoStation.totalStands.availabilities.stands} places`);
+      const spanPlace = document.getElementById("place");
+      spanPlace.textContent = ` ${infoStation.totalStands.availabilities.stands} places`;
 
-      $("#bike").text(` ${infoStation.totalStands.availabilities.bikes} <span>Vélos</span>`);
+      const spanBike = document.getElementById("bike");
+      spanBike.textContent = ` ${infoStation.totalStands.availabilities.bikes} vélos `;
+
 
 }
 

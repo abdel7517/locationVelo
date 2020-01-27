@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Location de vélo</title>
+  <link rel="stylesheet"  href="main.css">
+  <!-- Fonta Awesone -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<!-- CSS et JS map  -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+</head>
+
+
+<body>
+<h1 >Louer un vélo à Nante</h1>
+
+<section id="slidePresentation">
+<!-- <p> Comment louer un vélo ? </p>
+ -->
+  <div class="slide">
+<img id="image" src="map.jpg">
+
+ </div>
+
+  <div class="slideManag">
+    <a href="#features" id="buttonPrev"><i class="fas fa-arrow-circle-left arrowLeft"></i></button>
+    <a href="#features"id="pause"><i class="fas fa-pause-circle pause"></i></a>
+   <a href="#features" id="buttonNext"><i class="fas fa-arrow-circle-right arrowRight"></i></a>
+  </div>
+  </section>
+
+<section id="ContainerBooking">
+
+   <div id="map"></div>
+   <section id="booking">
+
+   <div id="stationInfo">
+   <span id="big">Détails stations:</span> </br>
+     <div id="errorStation"></div>
+     <span id="address"></span>
+     <span id="place"></span>
+     <span id="bike"></span>
+   </div>
+
+     <form id="for">
+       <label for="name">Nom :</label>
+       <input type="text" name="name" id="name" required>
+       <div id="errorName"></div>
+       </br>
+       <label for="firstName"> Prénom :</label>
+       <input type="text" name="firstName" id="firstName">
+       <div id="errorFirstName"></div>
+      </br>
+    </br>
+       <button id="submit">Réserver</button>
+       <div id="alreadyReserv"></div>
+     </form>
+<div id="a">  </div>
+
+ </section>
+
+</section>
+
+<footer id="footer">
+ <div id="before"> Expire dans : <strong id="min">20</strong> min <strong id="seg">10</strong> sec</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="form.js"></script>
+<script type="text/javascript" src="slider.js"></script>
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript" src="test.js"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript" src="canva.js" defer ></script>
+<script type="text/javascript" src="main.js" defer ></script>
+
+
+</body>
+
+
+</html>
